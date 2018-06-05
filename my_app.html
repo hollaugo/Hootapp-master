@@ -8,7 +8,16 @@
  <script>
         hsp.init({
         });
+        hsp.bind('refresh', function() {
+    window.location.reload();
+});
+
+hsp.bind('dropuser', function(username, tweetID) {
+    hsp.showUser(username);
+});
         </script>
+
+
 
 </script>
 <h2>My First Hoot App</h2>
