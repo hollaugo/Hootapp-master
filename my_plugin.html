@@ -11,7 +11,13 @@
               hsp.init(hsp_params);
             });
           </script>
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+          hsp.init(hsp_params);
+                });
+                hsp.bind('sendtoapp', function(message){
+  sendToAppHandler(message);
+});
+          </script>
           
           <script>
               function sendToAppHandler(message) {
@@ -26,11 +32,7 @@
                   var hsp_params = {
                       };
               
-                  hsp.init(hsp_params);
-                });
-                hsp.bind('sendtoapp', function(message){
-  sendToAppHandler(message);
-});
+                  
 
               </script>
   </body>
